@@ -67,9 +67,9 @@ class TeacherOperation:
 		                                                  '.topbar-main .main-menu li > a')
 		my_action.move_to_element(elems_main_menu_a[-1]).perform()
 		
-		# 点击班级情况
-		self.web_driver.find_element(By.CSS_SELECTOR,'.main-menu .menu-title').click()
 		# 点击班级学生
+		self.web_driver.find_element(By.CSS_SELECTOR,'.main-menu .menu-title').click()
+		# 班级学生内部的
 		getList_class_students = self.web_driver.find_elements(By.CSS_SELECTOR,
 		                                                       '.ng-scope .panel')
 		getList_class_students[-1].find_element(By.CSS_SELECTOR, '.panel-heading').click()

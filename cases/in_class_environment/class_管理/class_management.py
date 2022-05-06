@@ -57,7 +57,12 @@ class Case_tc000003:
 		                                   '2015龙山理22班', 44)
 		ret_jsonObj = res_add_class.json()
 		INFO(ret_jsonObj)
-		CHECK_POINT('添加结果回码', ret_jsonObj['retcode'] == 1)
+		expected = {
+					"retcode": 1,
+					"reason": "duplicated class name"
+					}
+		
+		CHECK_POINT('添加结果回码', ret_jsonObj == expected)
 		
 		STEP(2, '列出班级')
 		res_list_class = gs_class.list_class(SENIOR_THREE_GRADE_ID)

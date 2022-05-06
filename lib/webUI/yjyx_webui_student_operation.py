@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from cfg.cfg import *
 import time
 from hytest import *
-
+from selenium.webdriver.common.action_chains import ActionChains
 
 class StudentOperation:
 	
@@ -33,9 +33,24 @@ class StudentOperation:
 		self.web_driver.get(g_web_url_students)
 		
 		# 键入用户名和密码
-		self.web_driver.find_element(By.ID,'username').send_keys(username)
-		self.web_driver.find_element(By.ID, 'password').send_keys(password)
+		if username is not None:
+			self.web_driver.find_element(By.ID,'username').send_keys(username)
+		if password is not None:
+			self.web_driver.find_element(By.ID, 'password').send_keys(password)
+		
 		self.web_driver.find_element(By.ID,'submit').click()
+		time.sleep(1)
+		
+	def get_tips_info(self):
+		# 获取提示信息
+		tips_text = self.web_driver.find_element(By.CSS_SELECTOR,
+		                                               '.bootstrap-dialog-message').text
+		# 点击 OK 按钮
+		self.web_driver.find_element(By.CSS_SELECTOR,
+		                             '.bootstrap-dialog-footer-buttons .btn').click()
+		
+		return tips_text
+		
 		
 	def get_home_page_info(self):
 		'''
@@ -88,6 +103,16 @@ class StudentOperation:
 		'''
 		self.web_driver.implicitly_wait(5)
 		self.web_driver.refresh()
+		
+	def student_sign_out(self):
+		# 鼠标移动到此处
+		my_action = ActionChains(self.web_driver)
+		elems_main_menu_a = self.web_driver.find_elements(By.CSS_SELECTOR,
+		                                                  '#header-topbar-option .dropdown')
+		my_action.move_to_element(elems_main_menu_a[-1]).perform()
+		
+		# 点击退出
+		self.web_driver.find_element(By.CSS_SELECTOR, '[ng-click="logout()"] > i').click()
 		
 student_operation = StudentOperation()
 if __name__ == '__main__':

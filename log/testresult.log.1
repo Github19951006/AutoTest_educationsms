@@ -1,0 +1,91 @@
+
+
+  ========= 测试开始 : 20220506_234647 =========
+
+
+
+>>> cases\
+
+[ suite setup ] cases\
+初始化 删除所有老师
+初始化 删除所有学生
+初始化 删除所有班级
+
+
+>>> cases\in_class_environment\
+
+[ suite setup ] cases\in_class_environment\
+创建一个班级
+20660
+
+
+>>> cases\in_class_environment\no_teacher_environment\
+
+[ suite setup ] cases\in_class_environment\no_teacher_environment\
+删除所有老师
+
+
+>>> cases\in_class_environment\no_teacher_environment\no_students_environment\
+
+[ suite setup ] cases\in_class_environment\no_teacher_environment\no_students_environment\
+初始化 删除所有学生
+
+
+>>> cases\in_class_environment\no_teacher_environment\no_students_environment\web_teacher_操作\teacher_operation.py
+
+[ suite setup ] cases\in_class_environment\no_teacher_environment\no_students_environment\web_teacher_操作\teacher_operation.py
+
+-- 第 1 步 -- 添加老师 
+
+
+* 老师登录2 - tc005002  -  2022-05-06 23:46:49
+
+[ case setup ] 老师登录2 - tc005002
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 检查首页信息 
+
+['白月学院00002', '老师数学老师-文跃锐', '高中数学', '0', '0', '0']
+
+** 检查点 **  检查首页信息 ---->  通过
+
+
+-- 第 2 步 -- 点击 班级学生 菜单 
+
+老六
+
+** 检查点 **  检查班级学生信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 老师登录2 - tc005002
+
+[ suite teardown ] cases\in_class_environment\no_teacher_environment\no_students_environment\web_teacher_操作\teacher_operation.py
+
+[ suite teardown ] cases\in_class_environment\
+
+
+  ========= 测试结束 : 20220506_234735 =========
+
+
+  耗时    : 47.999 秒
+
+
+  预备执行用例数量 : 1
+
+  实际执行用例数量 : 1
+
+  通过 : 1
+
+  失败 : 0
+
+  异常 : 0
+
+  套件初始化失败 : 0
+
+  套件清除  失败 : 0
+
+  用例初始化失败 : 0
+
+  用例清除  失败 : 0

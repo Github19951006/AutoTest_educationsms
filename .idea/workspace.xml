@@ -20,7 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3c9da19-7e4b-4393-b084-abba7aa9ed5c" name="Default Changelist" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/cases/in_class_environment/no_teacher_environment/no_students_environment/web_student_操作/__st__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/testresult.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/testresult.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases/in_class_environment/class_管理/class_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/cases/in_class_environment/class_管理/class_management.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases/in_class_environment/no_teacher_environment/no_students_environment/web_student_操作/student_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/cases/in_class_environment/no_teacher_environment/no_students_environment/web_student_操作/student_operation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/webUI/yjyx_webui_student_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/webUI/yjyx_webui_student_operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/webUI/yjyx_webui_teacher_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/webUI/yjyx_webui_teacher_operation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,26 +70,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/webUI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Auto_hytest" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\study\AutoTest_education\cases\in_class_environment\no_teacher_environment\teacher_管理" />
-      <recent name="D:\study\AutoTest_education\cases\in_class_environment\class_管理" />
-      <recent name="D:\study\AutoTest_education\cases\no_class_environment\class_管理" />
-      <recent name="D:\study\AutoTest_education\cases\in_class_environment\no_teacher_environment" />
-      <recent name="D:\study\AutoTest_education\cases\in_class_environment" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\study\AutoTest_education\lib\webUI" />
       <recent name="D:\study\AutoTest_education\cases\in_class_environment\no_teacher_environment\no_students_environment" />
       <recent name="D:\study\AutoTest_education\cases\in_class_environment\in_teacher_environment\in_students_environment\student_管理" />
       <recent name="D:\study\AutoTest_education\cases\in_class_environment\in_teacher_environment" />
       <recent name="D:\study\AutoTest_education\cases\in_class_environment\in_teacher_environment\teacher_管理" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\study\AutoTest_education\cases\in_class_environment\no_teacher_environment\teacher_管理" />
+      <recent name="D:\study\AutoTest_education\cases\in_class_environment\class_管理" />
+      <recent name="D:\study\AutoTest_education\cases\no_class_environment\class_管理" />
+      <recent name="D:\study\AutoTest_education\cases\in_class_environment\no_teacher_environment" />
+      <recent name="D:\study\AutoTest_education\cases\in_class_environment" />
     </key>
   </component>
   <component name="RunManager" selected="Python.yjyx_webui_teacher_operation">
@@ -218,7 +225,9 @@
       <workItem from="1651319252591" duration="19691000" />
       <workItem from="1651415110302" duration="3346000" />
       <workItem from="1651561808703" duration="13261000" />
-      <workItem from="1651629045821" duration="20109000" />
+      <workItem from="1651629045821" duration="20299000" />
+      <workItem from="1651684338153" duration="1656000" />
+      <workItem from="1651842374313" duration="8892000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1650474437734</created>
@@ -437,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651683945931</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Initial commit">
+      <created>1651684008887</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1651684008887</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,10 +481,10 @@
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
     <state x="-658" y="610" key="#Notifications/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1650816787215" />
-    <state x="-760" y="489" key="FileChooserDialogImpl" timestamp="1651589954022">
+    <state x="-760" y="489" key="FileChooserDialogImpl" timestamp="1651842385918">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
-    <state x="-760" y="489" key="FileChooserDialogImpl/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651589954022" />
+    <state x="-760" y="489" key="FileChooserDialogImpl/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651842385918" />
     <state x="-760" y="681" key="FileChooserDialogImpl/-1080.0.1080.1860/0.0.1440.920@-1080.0.1080.1860" timestamp="1650561710537" />
     <state x="569" y="381" key="FileChooserDialogImpl/0.0.1920.1040/-128.1080.1440.920@0.0.1920.1040" timestamp="1650645956736" />
     <state x="-698" y="645" key="Github.ShareDialog" timestamp="1650988241917">
@@ -480,46 +496,46 @@
       <screen x="-1080" y="0" width="1080" height="1860" />
     </state>
     <state x="-710" y="642" key="Github.UntrackedFilesDialog/-1080.0.1080.1860/0.0.1440.920@-1080.0.1080.1860" timestamp="1650474397218" />
-    <state width="1037" height="825" key="GridCell.Tab.0.bottom" timestamp="1651671188613">
+    <state width="1037" height="684" key="GridCell.Tab.0.bottom" timestamp="1651684184849">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
-    <state width="1037" height="825" key="GridCell.Tab.0.bottom/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651671188613" />
+    <state width="1037" height="684" key="GridCell.Tab.0.bottom/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651684184849" />
     <state width="518" height="524" key="GridCell.Tab.0.bottom/-1080.0.1080.1860/0.0.1440.920@-1080.0.1080.1860" timestamp="1650560391657" />
     <state width="937" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040/-128.1080.1440.920@0.0.1920.1040" timestamp="1650646775679" />
-    <state width="1037" height="825" key="GridCell.Tab.0.center" timestamp="1651671188613">
+    <state width="1037" height="684" key="GridCell.Tab.0.center" timestamp="1651684184849">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
-    <state width="1037" height="825" key="GridCell.Tab.0.center/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651671188613" />
+    <state width="1037" height="684" key="GridCell.Tab.0.center/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651684184849" />
     <state width="518" height="524" key="GridCell.Tab.0.center/-1080.0.1080.1860/0.0.1440.920@-1080.0.1080.1860" timestamp="1650560391657" />
     <state width="937" height="263" key="GridCell.Tab.0.center/0.0.1920.1040/-128.1080.1440.920@0.0.1920.1040" timestamp="1650646775678" />
-    <state width="1037" height="825" key="GridCell.Tab.0.left" timestamp="1651671188613">
+    <state width="1037" height="684" key="GridCell.Tab.0.left" timestamp="1651684184849">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
-    <state width="1037" height="825" key="GridCell.Tab.0.left/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651671188613" />
+    <state width="1037" height="684" key="GridCell.Tab.0.left/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651684184849" />
     <state width="518" height="524" key="GridCell.Tab.0.left/-1080.0.1080.1860/0.0.1440.920@-1080.0.1080.1860" timestamp="1650560391657" />
     <state width="937" height="263" key="GridCell.Tab.0.left/0.0.1920.1040/-128.1080.1440.920@0.0.1920.1040" timestamp="1650646775678" />
-    <state width="1037" height="825" key="GridCell.Tab.0.right" timestamp="1651671188613">
+    <state width="1037" height="684" key="GridCell.Tab.0.right" timestamp="1651684184849">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
-    <state width="1037" height="825" key="GridCell.Tab.0.right/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651671188613" />
+    <state width="1037" height="684" key="GridCell.Tab.0.right/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651684184849" />
     <state width="518" height="524" key="GridCell.Tab.0.right/-1080.0.1080.1860/0.0.1440.920@-1080.0.1080.1860" timestamp="1650560391657" />
     <state width="937" height="263" key="GridCell.Tab.0.right/0.0.1920.1040/-128.1080.1440.920@0.0.1920.1040" timestamp="1650646775679" />
-    <state width="1037" height="684" key="GridCell.Tab.1.bottom" timestamp="1651668888680">
+    <state width="1037" height="684" key="GridCell.Tab.1.bottom" timestamp="1651684184850">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
-    <state width="1037" height="684" key="GridCell.Tab.1.bottom/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651668888680" />
-    <state width="1037" height="684" key="GridCell.Tab.1.center" timestamp="1651668888679">
+    <state width="1037" height="684" key="GridCell.Tab.1.bottom/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651684184850" />
+    <state width="1037" height="684" key="GridCell.Tab.1.center" timestamp="1651684184849">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
-    <state width="1037" height="684" key="GridCell.Tab.1.center/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651668888679" />
-    <state width="1037" height="684" key="GridCell.Tab.1.left" timestamp="1651668888679">
+    <state width="1037" height="684" key="GridCell.Tab.1.center/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651684184849" />
+    <state width="1037" height="684" key="GridCell.Tab.1.left" timestamp="1651684184849">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
-    <state width="1037" height="684" key="GridCell.Tab.1.left/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651668888679" />
-    <state width="1037" height="684" key="GridCell.Tab.1.right" timestamp="1651668888679">
+    <state width="1037" height="684" key="GridCell.Tab.1.left/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651684184849" />
+    <state width="1037" height="684" key="GridCell.Tab.1.right" timestamp="1651684184850">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
-    <state width="1037" height="684" key="GridCell.Tab.1.right/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651668888679" />
+    <state width="1037" height="684" key="GridCell.Tab.1.right/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651684184850" />
     <state x="-840" y="262" key="IDE.errors.dialog" timestamp="1651562629996">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
@@ -529,10 +545,10 @@
       <screen x="-1080" y="0" width="1080" height="1860" />
     </state>
     <state x="-905" y="700" key="MultipleFileMergeDialog/-1080.0.1080.1860/0.0.1440.920@-1080.0.1080.1860" timestamp="1650557554779" />
-    <state x="-948" y="480" key="Vcs.Push.Dialog.v2" timestamp="1651683951902">
+    <state x="-948" y="480" key="Vcs.Push.Dialog.v2" timestamp="1651684014513">
       <screen x="-1080" y="-192" width="1080" height="1860" />
     </state>
-    <state x="-948" y="480" key="Vcs.Push.Dialog.v2/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651683951902" />
+    <state x="-948" y="480" key="Vcs.Push.Dialog.v2/-1080.-192.1080.1860/0.0.1440.920@-1080.-192.1080.1860" timestamp="1651684014513" />
     <state x="-948" y="673" key="Vcs.Push.Dialog.v2/-1080.0.1080.1860/0.0.1440.920@-1080.0.1080.1860" timestamp="1650564185246" />
     <state x="235" y="376" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-128.1080.1440.920@0.0.1920.1040" timestamp="1650647274007" />
     <state x="-747" y="661" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1650817401946">
