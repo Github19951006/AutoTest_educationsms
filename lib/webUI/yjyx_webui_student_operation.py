@@ -123,6 +123,32 @@ class StudentOperation:
 		
 		# 点击退出
 		self.web_driver.find_element(By.CSS_SELECTOR, '[ng-click="logout()"] > i').click()
+	
+	def modify_student_password(self,old_password,modif_password,confirm_password):
+		# 鼠标移动到此处
+		my_action = ActionChains(self.web_driver)
+		elems_main_menu_a = self.web_driver.find_elements(By.CSS_SELECTOR,
+		                                                  '#header-topbar-option .dropdown')
+		my_action.move_to_element(elems_main_menu_a[-1]).perform()
+		
+		# 点击个人信息
+		self.web_driver.find_element(By.CSS_SELECTOR, '.dropdown .fa-user').click()
+		time.sleep(1)
+		
+		# 修改密码
+		self.web_driver.find_elements(By.CSS_SELECTOR,
+		                              '.col-lg-12 .responsive li')[-1].click()
+		
+		table_password_list_elements = self.web_driver.find_elements(By.CSS_SELECTOR,
+		                                                             '.panel-body .table_password input')
+		table_password_list_elements[0].send_keys(old_password)
+		table_password_list_elements[1].send_keys(modif_password)
+		table_password_list_elements[2].send_keys(confirm_password)
+		
+		# 确认按钮
+		self.web_driver.find_element(By.CSS_SELECTOR,
+		                             '.table_password .btn-orange').click()
+		time.sleep(1)
 		
 student_operation = StudentOperation()
 if __name__ == '__main__':
