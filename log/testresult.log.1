@@ -1,6 +1,6 @@
 
 
-  ========= 测试开始 : 20220506_234647 =========
+  ========= 测试开始 : 20220507_162642 =========
 
 
 
@@ -16,7 +16,369 @@
 
 [ suite setup ] cases\in_class_environment\
 创建一个班级
-20660
+20674
+
+
+>>> cases\in_class_environment\class_管理\class_management.py
+
+* 添加班级2 - tc000002  -  2022-05-07 16:26:44
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建一个班级 
+
+
+** 检查点 **  添加结果回码 ---->  通过
+
+
+-- 第 2 步 -- 列出班级 
+
+[{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206744588904', 'studentlimit': 69, 'studentnumber': 0, 'id': 20674, 'teacherlist': []}, {'name': '龙山理7班', 'grade__name': '高三', 'invitecode': '206758958482', 'studentlimit': 89, 'studentnumber': 0, 'id': 20675, 'teacherlist': []}]
+
+** 检查点 **  列出结果检查 ---->  通过
+
+  PASS 
+
+[ case teardown ] 添加班级2 - tc000002
+
+* 添加班级3（存在同年级的同名班级） - tc000003  -  2022-05-07 16:26:44
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建一个班级 
+
+{'reason': 'Traceback (most recent call last):\n  File "/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", line 542, in addClass\n    school_class = self._addClass(name,schoolid,gradeid,studentlimit)\n  File "/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", line 531, in _addClass\n    school_class.save()\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 710, in save\n    force_update=force_update, update_fields=update_fields)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 738, in save_base\n    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 822, in _save_table\n    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 861, in _do_insert\n    using=using, raw=raw)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/manager.py", line 127, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/query.py", line 920, in _insert\n    return query.get_compiler(using=using).execute_sql(return_id)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 974, in execute_sql\n    cursor.execute(sql, params)\n  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute\n    return self.cursor.execute(sql, params)\n  File "/usr/local/lib/python2.7/site-packages/django/db/utils.py", line 97, in __exit__\n    six.reraise(dj_exc_type, dj_exc_value, traceback)\n  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute\n    return self.cursor.execute(sql, params)\n  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute\n    return self.cursor.execute(query, args)\n  File "/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute\n    self.errorhandler(self, exc, value)\n  File "/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler\n    raise errorclass, errorvalue\nIntegrityError: (1062, "Duplicate entry \'2015\\xe9\\xbe\\x99\\xe5\\xb1\\xb1\\xe7\\x90\\x8622\\xe7\\x8f\\xad-407-6\' for key \'name\'")\n', 'retcode': 1}
+
+** 检查点 **  添加结果回码 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "cases\in_class_environment\class_管理\class_management.py", line 65, in teststeps
+    CHECK_POINT('添加结果回码', ret_jsonObj == expected)
+  File "c:\python38\lib\site-packages\hytest\common.py", line 58, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+* 修改班级1 - tc000051  -  2022-05-07 16:26:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 修改班级名字 
+
+
+** 检查点 **  添加结果回码 ---->  通过
+
+
+-- 第 2 步 -- 列出班级 
+
+{'gradeid': 6, 'retlist': [{'name': '修改2015龙山理22班', 'grade__name': '高三', 'invitecode': '206744588904', 'studentlimit': 69, 'studentnumber': 0, 'id': 20674, 'teacherlist': []}], 'retcode': 0}
+
+** 检查点 **  列出结果检查 ---->  通过
+
+  PASS 
+
+[ case teardown ] 修改班级1 - tc000051
+
+* 修改班级2（已有的班级同名） - tc000052  -  2022-05-07 16:26:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建一个班级 
+
+
+** 检查点 **  添加结果回码 ---->  通过
+
+
+-- 第 2 步 -- 修改班级名字 
+
+{'reason': '未知错误:Traceback (most recent call last):\n  File "/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", line 612, in modifyClass\n    school_class.save()\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 710, in save\n    force_update=force_update, update_fields=update_fields)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 738, in save_base\n    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 803, in _save_table\n    forced_update)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/base.py", line 853, in _do_update\n    return filtered._update(values) > 0\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/query.py", line 580, in _update\n    return query.get_compiler(self.db).execute_sql(CURSOR)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1062, in execute_sql\n    cursor = super(SQLUpdateCompiler, self).execute_sql(result_type)\n  File "/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 840, in execute_sql\n    cursor.execute(sql, params)\n  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute\n    return self.cursor.execute(sql, params)\n  File "/usr/local/lib/python2.7/site-packages/django/db/utils.py", line 97, in __exit__\n    six.reraise(dj_exc_type, dj_exc_value, traceback)\n  File "/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute\n    return self.cursor.execute(sql, params)\n  File "/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 124, in execute\n    return self.cursor.execute(query, args)\n  File "/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute\n    self.errorhandler(self, exc, value)\n  File "/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler\n    raise errorclass, errorvalue\nIntegrityError: (1062, "Duplicate entry \'2015\\xe9\\xbe\\x99\\xe5\\xb1\\xb1\\xe7\\x90\\x8622\\xe7\\x8f\\xad-407-6\' for key \'name\'")\n', 'retcode': 10000}
+
+** 检查点 **  添加结果回码 ---->  !! 不通过!!
+
+  FAIL    
+Traceback:
+  File "cases\in_class_environment\class_管理\class_management.py", line 167, in teststeps
+    CHECK_POINT('添加结果回码', retcode == 1)
+  File "c:\python38\lib\site-packages\hytest\common.py", line 58, in CHECK_POINT
+    raise AssertionError()
+AssertionError
+
+
+[ case teardown ] 修改班级2（已有的班级同名） - tc000052
+
+* 修改班级3（ID为一个不存在的班级ID号） - tc000053  -  2022-05-07 16:26:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 修改不存在的班级ID号 
+
+{'reason': 'id 为`3413`的班级不存在', 'retcode': 404}
+
+** 检查点 **  添加结果回码 ---->  通过
+
+
+-- 第 3 步 -- 列出班级 
+
+{'gradeid': 6, 'retlist': [{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206744588904', 'studentlimit': 69, 'studentnumber': 0, 'id': 20674, 'teacherlist': []}], 'retcode': 0}
+
+** 检查点 **  列出结果检查 ---->  通过
+
+  PASS 
+
+* 删除班级1 - tc000081  -  2022-05-07 16:26:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 删除不存在的班级ID号 
+
+{'reason': 'id 为`3413`的班级不存在', 'retcode': 404}
+
+** 检查点 **  添加结果回码 ---->  通过
+
+
+-- 第 3 步 -- 列出班级 
+
+{'gradeid': 6, 'retlist': [{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206744588904', 'studentlimit': 69, 'studentnumber': 0, 'id': 20674, 'teacherlist': []}], 'retcode': 0}
+
+** 检查点 **  列出结果检查 ---->  通过
+
+  PASS 
+
+* 删除班级2 - tc000082  -  2022-05-07 16:26:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建一个班级 
+
+
+** 检查点 **  添加结果回码 ---->  通过
+
+
+-- 第 2 步 -- 删除存在的班级ID号 
+
+{'retcode': 0}
+
+** 检查点 **  添加结果回码 ---->  通过
+
+
+-- 第 3 步 -- 列出班级 
+
+{'gradeid': 6, 'retlist': [{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206744588904', 'studentlimit': 69, 'studentnumber': 0, 'id': 20674, 'teacherlist': []}], 'retcode': 0}
+
+** 检查点 **  列出结果检查 ---->  通过
+
+  PASS 
+
+
+>>> cases\in_class_environment\in_teacher_environment\
+
+[ suite setup ] cases\in_class_environment\in_teacher_environment\
+添加一个老师
+5214
+
+
+>>> cases\in_class_environment\in_teacher_environment\in_students_environment\
+
+[ suite setup ] cases\in_class_environment\in_teacher_environment\in_students_environment\
+
+-- 第 1 步 -- 创建一个学生 
+
+
+
+>>> cases\in_class_environment\in_teacher_environment\in_students_environment\student_管理\student_add.py
+
+* 添加学生2 - tc002002  -  2022-05-07 16:26:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建一个学生 
+
+
+** 检查点 **  检查返回创建成功码 ---->  通过
+
+
+-- 第 2 步 -- 列出学生信息 
+
+
+** 检查点 **  检查返回结果id是否一致 ---->  通过
+
+  PASS 
+
+[ case teardown ] 添加学生2 - tc002002
+
+
+>>> cases\in_class_environment\in_teacher_environment\in_students_environment\student_管理\student_del.py
+
+* 删除学生1 - tc002081  -  2022-05-07 16:26:45
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建一个学生 
+
+{'retcode': 0, 'id': 2124}
+
+** 检查点 **  检查返回创建成功码 ---->  通过
+
+
+-- 第 2 步 -- 删除存在的学生ID号 
+
+
+-- 第 2 步 -- 列出学生信息 
+
+
+** 检查点 **  检查返回结果id是否一致 ---->  通过
+
+  PASS 
+
+
+>>> cases\in_class_environment\in_teacher_environment\no_students_environment\
+
+[ suite setup ] cases\in_class_environment\in_teacher_environment\no_students_environment\
+删除所有学生
+
+
+>>> cases\in_class_environment\in_teacher_environment\no_students_environment\student_管理\student_add.py
+
+* 添加学生1 - tc002001  -  2022-05-07 16:26:46
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建一个学生 
+
+0
+
+** 检查点 **  检查返回创建成功码 ---->  通过
+
+
+-- 第 2 步 -- 列出学生信息 
+
+
+** 检查点 **  检查返回结果id是否一致 ---->  通过
+
+  PASS 
+
+
+>>> cases\in_class_environment\in_teacher_environment\teacher_管理\teacher_add.py
+
+* 添加老师2 - tc001002  -  2022-05-07 16:26:46
+
+  [ case execution steps ]
+20674
+
+-- 第 1 步 -- 添加一个老师 
+
+
+** 检查点 **  检查返回码信息 ---->  通过
+
+5215
+
+-- 第 2 步 -- 列出老师信息 
+
+5215
+
+** 检查点 **  检查添加老师返回的ID信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 添加老师2 - tc001002
+
+* 添加老师3（系统中存在同登录名的老师） - tc001003  -  2022-05-07 16:26:46
+
+  [ case execution steps ]
+20674
+
+-- 第 1 步 -- 添加一个老师 
+
+{'reason': '登录名 new_teacher 已经存在', 'retcode': 1}
+
+** 检查点 **  检查返回码信息 ---->  通过
+
+
+-- 第 2 步 -- 列出老师信息 
+
+初始化老师
+
+** 检查点 **  检查返回老师真实姓名信息 ---->  通过
+
+  PASS 
+
+
+>>> cases\in_class_environment\in_teacher_environment\teacher_管理\teacher_del.py
+
+* 删除老师1(不存在的老师ID号) - tc001081  -  2022-05-07 16:26:46
+
+  [ case execution steps ]
+{'reason': 'id 为`4545`的老师不存在', 'retcode': 404}
+
+** 检查点 **  检查返回结果 ---->  通过
+
+  PASS 
+
+* 删除老师2(存在的老师ID号) - tc001082  -  2022-05-07 16:26:46
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 添加一个老师 
+
+5216
+
+** 检查点 **  检查删除老师后的结果 ---->  通过
+
+
+-- 第 2 步 -- 列出老师信息 
+
+5214
+
+** 检查点 **  检查修改后老师的信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 删除老师2(存在的老师ID号) - tc001082
+
+
+>>> cases\in_class_environment\in_teacher_environment\teacher_管理\teacher_modify.py
+
+* 修改老师1 - tc001051  -  2022-05-07 16:26:46
+
+  [ case execution steps ]
+20674
+
+-- 第 1 步 -- 修改一个老师 
+
+{'reason': 'id 为`435`的老师不存在', 'retcode': 1}
+
+** 检查点 **  检查返回码信息 ---->  通过
+
+
+** 检查点 **  检查返回码信息 ---->  通过
+
+  PASS 
+
+* 修改老师2（修改真实名和授课班级,授课班级原来是1个班，改为两个班） - tc001052  -  2022-05-07 16:26:46
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建一个班级 
+
+
+-- 第 2 步 -- 修改老师真实名和授课班级 
+
+
+** 检查点 **  检查返回码结果 ---->  通过
+
+
+-- 第 3 步 -- 列出老师信息 
+
+{'retlist': [{'username': 'new_teacher', 'teachclasslist': [20674, 20679], 'realname': '修改初始化老师', 'id': 5214, 'phonenumber': '13451813456', 'email': 'jcysdf@123.com', 'idcardnumber': '3209251983090987899'}], 'retcode': 0}
+
+** 检查点 **  检查修改后老师的信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 修改老师2（修改真实名和授课班级,授课班级原来是1个班，改为两个班） - tc001052
+
+[ suite teardown ] cases\in_class_environment\in_teacher_environment\
 
 
 >>> cases\in_class_environment\no_teacher_environment\
@@ -31,6 +393,97 @@
 初始化 删除所有学生
 
 
+>>> cases\in_class_environment\no_teacher_environment\no_students_environment\web_student_操作\
+
+[ suite setup ] cases\in_class_environment\no_teacher_environment\no_students_environment\web_student_操作\
+
+
+>>> cases\in_class_environment\no_teacher_environment\no_students_environment\web_student_操作\student_operation.py
+
+* 学生登录1 - tc005081  -  2022-05-07 16:26:47
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录学生系统 
+
+['精锐', '白月学院00002', '21267853841（注册码）', '0', '0']
+
+** 检查点 **  检查首页信息 ---->  通过
+
+
+-- 第 2 步 -- 点击 错题库 菜单 
+
+您尚未有错题入库哦
+
+** 检查点 **  检查错题入库信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 学生登录1 - tc005081
+
+* 学生登录 不输入账号 - UI-StuLg001  -  2022-05-07 16:27:22
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录学生系统 
+
+登录失败 : 用户或者密码错误
+
+** 检查点 **  检查错误提示信息 ---->  通过
+
+  PASS 
+
+* 学生登录 不输入密码 - UI-StuLg002  -  2022-05-07 16:27:29
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录学生系统 
+
+登录失败 : 用户或者密码错误
+
+** 检查点 **  检查错误提示信息 ---->  通过
+
+  PASS 
+
+* 学生登录 输入错误账号 - UI-StuLg003  -  2022-05-07 16:27:34
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录学生系统 
+
+登录失败 : 用户或者密码错误
+
+** 检查点 **  检查错误提示信息 ---->  通过
+
+  PASS 
+
+* 学生登录 输入错误密码 - UI-StuLg004  -  2022-05-07 16:27:38
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录学生系统 
+
+登录失败 : 用户或者密码错误
+
+** 检查点 **  检查错误提示信息 ---->  通过
+
+  PASS 
+
+* 学生登录 输入错误密码 - UI-StuLg005  -  2022-05-07 16:27:43
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 登录学生系统 
+
+登录失败 : 用户或者密码错误
+
+** 检查点 **  检查错误提示信息 ---->  通过
+
+  PASS 
+
+[ suite teardown ] cases\in_class_environment\no_teacher_environment\no_students_environment\web_student_操作\
+
+
 >>> cases\in_class_environment\no_teacher_environment\no_students_environment\web_teacher_操作\teacher_operation.py
 
 [ suite setup ] cases\in_class_environment\no_teacher_environment\no_students_environment\web_teacher_操作\teacher_operation.py
@@ -38,7 +491,23 @@
 -- 第 1 步 -- 添加老师 
 
 
-* 老师登录2 - tc005002  -  2022-05-06 23:46:49
+* 老师登录1 - tc005001  -  2022-05-07 16:27:49
+
+  [ case execution steps ]
+['白月学院00002', '老师数学老师-文跃锐', '高中数学', '0', '0', '0']
+
+** 检查点 **  检查首页信息 ---->  通过
+
+
+-- 第 3 步 -- 点击 班级学生 菜单 
+
+该班级还没有学生注册
+
+** 检查点 **  检查班级学生信息 ---->  通过
+
+  PASS 
+
+* 老师登录2 - tc005002  -  2022-05-07 16:28:13
 
 [ case setup ] 老师登录2 - tc005002
 
@@ -53,34 +522,152 @@
 
 -- 第 2 步 -- 点击 班级学生 菜单 
 
-老六
+  ABORT   Message: element click intercepted: Element <span class="menu-title">...</span> is not clickable at point (30, 10). Other element would receive the click: <ul class="nav navbar navbar-top-links navbar-left mbn">...</ul>
+  (Session info: chrome=101.0.4951.41)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00AAB8F3+2406643]
+	Ordinal0 [0x00A3AF31+1945393]
+	Ordinal0 [0x0092C748+837448]
+	Ordinal0 [0x0095FA1B+1047067]
+	Ordinal0 [0x0095D9F8+1038840]
+	Ordinal0 [0x0095B6DB+1029851]
+	Ordinal0 [0x0095A439+1025081]
+	Ordinal0 [0x00950083+983171]
+	Ordinal0 [0x0097427C+1131132]
+	Ordinal0 [0x0094FA64+981604]
+	Ordinal0 [0x00974494+1131668]
+	Ordinal0 [0x00984682+1197698]
+	Ordinal0 [0x00974096+1130646]
+	Ordinal0 [0x0094E636+976438]
+	Ordinal0 [0x0094F546+980294]
+	GetHandleVerifier [0x00D19612+2498066]
+	GetHandleVerifier [0x00D0C920+2445600]
+	GetHandleVerifier [0x00B44F2A+579370]
+	GetHandleVerifier [0x00B43D36+574774]
+	Ordinal0 [0x00A41C0B+1973259]
+	Ordinal0 [0x00A46688+1992328]
+	Ordinal0 [0x00A46775+1992565]
+	Ordinal0 [0x00A4F8D1+2029777]
+	BaseThreadInitThunk [0x74F30419+25]
+	RtlGetAppContainerNamedObjectPath [0x770C72AD+237]
+	RtlGetAppContainerNamedObjectPath [0x770C727D+189]
+ 
+Traceback:
+  File "cases\in_class_environment\no_teacher_environment\no_students_environment\web_teacher_操作\teacher_operation.py", line 81, in teststeps
+    class_student_info = teacher_operation.get_class_student_info()
+  File "D:\study\AutoTest_education\lib\webUI\yjyx_webui_teacher_operation.py", line 71, in get_class_student_info
+    self.web_driver.find_element(By.CSS_SELECTOR,'.main-menu .menu-title').click()
+  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 693, in _execute
+    return self._parent.execute(command, params)
+  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 418, in execute
+    self.error_handler.check_response(response)
+  File "c:\python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <span class="menu-title">...</span> is not clickable at point (30, 10). Other element would receive the click: <ul class="nav navbar navbar-top-links navbar-left mbn">...</ul>
+  (Session info: chrome=101.0.4951.41)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00AAB8F3+2406643]
+	Ordinal0 [0x00A3AF31+1945393]
+	Ordinal0 [0x0092C748+837448]
+	Ordinal0 [0x0095FA1B+1047067]
+	Ordinal0 [0x0095D9F8+1038840]
+	Ordinal0 [0x0095B6DB+1029851]
+	Ordinal0 [0x0095A439+1025081]
+	Ordinal0 [0x00950083+983171]
+	Ordinal0 [0x0097427C+1131132]
+	Ordinal0 [0x0094FA64+981604]
+	Ordinal0 [0x00974494+1131668]
+	Ordinal0 [0x00984682+1197698]
+	Ordinal0 [0x00974096+1130646]
+	Ordinal0 [0x0094E636+976438]
+	Ordinal0 [0x0094F546+980294]
+	GetHandleVerifier [0x00D19612+2498066]
+	GetHandleVerifier [0x00D0C920+2445600]
+	GetHandleVerifier [0x00B44F2A+579370]
+	GetHandleVerifier [0x00B43D36+574774]
+	Ordinal0 [0x00A41C0B+1973259]
+	Ordinal0 [0x00A46688+1992328]
+	Ordinal0 [0x00A46775+1992565]
+	Ordinal0 [0x00A4F8D1+2029777]
+	BaseThreadInitThunk [0x74F30419+25]
+	RtlGetAppContainerNamedObjectPath [0x770C72AD+237]
+	RtlGetAppContainerNamedObjectPath [0x770C727D+189]
 
-** 检查点 **  检查班级学生信息 ---->  通过
 
-  PASS 
 
 [ case teardown ] 老师登录2 - tc005002
 
 [ suite teardown ] cases\in_class_environment\no_teacher_environment\no_students_environment\web_teacher_操作\teacher_operation.py
 
+
+>>> cases\in_class_environment\no_teacher_environment\teacher_管理\teacher_add.py
+
+* 添加老师1 - tc001001  -  2022-05-07 16:28:37
+
+  [ case execution steps ]
+20674
+
+-- 第 1 步 -- 添加一个老师 
+
+
+** 检查点 **  检查返回码信息 ---->  通过
+
+5218
+
+-- 第 2 步 -- 列出老师信息 
+
+5218
+
+** 检查点 **  检查添加老师返回的ID信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 添加老师1 - tc001001
+
 [ suite teardown ] cases\in_class_environment\
 
 
-  ========= 测试结束 : 20220506_234735 =========
+>>> cases\no_class_environment\class_管理\class_management.py
+
+* 添加班级1 - tc000001  -  2022-05-07 16:28:38
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 创建一个班级 
 
 
-  耗时    : 47.999 秒
+** 检查点 **  添加结果回码 ---->  通过
 
 
-  预备执行用例数量 : 1
+-- 第 2 步 -- 列出班级 
 
-  实际执行用例数量 : 1
 
-  通过 : 1
+** 检查点 **  列出结果检查 ---->  通过
 
-  失败 : 0
+  PASS 
 
-  异常 : 0
+[ case teardown ] 添加班级1 - tc000001
+
+
+  ========= 测试结束 : 20220507_162838 =========
+
+
+  耗时    : 115.730 秒
+
+
+  预备执行用例数量 : 26
+
+  实际执行用例数量 : 26
+
+  通过 : 23
+
+  失败 : 2
+
+  异常 : 1
 
   套件初始化失败 : 0
 

@@ -42,6 +42,12 @@ class StudentOperation:
 		time.sleep(1)
 		
 	def get_tips_info(self):
+	 
+		'''
+		**注意** ：有些弹窗并非浏览器的alert 窗口，
+		而是**html元素**，这种对话框，只需要通过之前介绍的选择器选中并进行相应的操作就可以了。
+	    '''
+		
 		# 获取提示信息
 		tips_text = self.web_driver.find_element(By.CSS_SELECTOR,
 		                                               '.bootstrap-dialog-message').text
@@ -105,6 +111,10 @@ class StudentOperation:
 		self.web_driver.refresh()
 		
 	def student_sign_out(self):
+		'''
+		登出学生系统
+		:return:
+		'''
 		# 鼠标移动到此处
 		my_action = ActionChains(self.web_driver)
 		elems_main_menu_a = self.web_driver.find_elements(By.CSS_SELECTOR,

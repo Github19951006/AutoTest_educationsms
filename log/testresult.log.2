@@ -1,6 +1,6 @@
 
 
-  ========= 测试开始 : 20220506_234423 =========
+  ========= 测试开始 : 20220506_235513 =========
 
 
 
@@ -16,12 +16,12 @@
 
 [ suite setup ] cases\in_class_environment\
 创建一个班级
-20653
+20668
 
 
 >>> cases\in_class_environment\class_管理\class_management.py
 
-* 添加班级2 - tc000002  -  2022-05-06 23:44:24
+* 添加班级2 - tc000002  -  2022-05-06 23:55:13
 
   [ case execution steps ]
 
@@ -33,7 +33,7 @@
 
 -- 第 2 步 -- 列出班级 
 
-[{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206537318574', 'studentlimit': 69, 'studentnumber': 0, 'id': 20653, 'teacherlist': []}, {'name': '龙山理7班', 'grade__name': '高三', 'invitecode': '206541389254', 'studentlimit': 89, 'studentnumber': 0, 'id': 20654, 'teacherlist': []}]
+[{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206689788472', 'studentlimit': 69, 'studentnumber': 0, 'id': 20668, 'teacherlist': []}, {'name': '龙山理7班', 'grade__name': '高三', 'invitecode': '206698711960', 'studentlimit': 89, 'studentnumber': 0, 'id': 20669, 'teacherlist': []}]
 
 ** 检查点 **  列出结果检查 ---->  通过
 
@@ -41,7 +41,7 @@
 
 [ case teardown ] 添加班级2 - tc000002
 
-* 添加班级3（存在同年级的同名班级） - tc000003  -  2022-05-06 23:44:24
+* 添加班级3（存在同年级的同名班级） - tc000003  -  2022-05-06 23:55:13
 
   [ case execution steps ]
 
@@ -60,7 +60,7 @@ Traceback:
 AssertionError
 
 
-* 修改班级1 - tc000051  -  2022-05-06 23:44:24
+* 修改班级1 - tc000051  -  2022-05-06 23:55:13
 
   [ case execution steps ]
 
@@ -72,7 +72,7 @@ AssertionError
 
 -- 第 2 步 -- 列出班级 
 
-{'gradeid': 6, 'retlist': [{'name': '修改2015龙山理22班', 'grade__name': '高三', 'invitecode': '206537318574', 'studentlimit': 69, 'studentnumber': 0, 'id': 20653, 'teacherlist': []}], 'retcode': 0}
+{'gradeid': 6, 'retlist': [{'name': '修改2015龙山理22班', 'grade__name': '高三', 'invitecode': '206689788472', 'studentlimit': 69, 'studentnumber': 0, 'id': 20668, 'teacherlist': []}], 'retcode': 0}
 
 ** 检查点 **  列出结果检查 ---->  通过
 
@@ -80,7 +80,7 @@ AssertionError
 
 [ case teardown ] 修改班级1 - tc000051
 
-* 修改班级2（已有的班级同名） - tc000052  -  2022-05-06 23:44:24
+* 修改班级2（已有的班级同名） - tc000052  -  2022-05-06 23:55:13
 
   [ case execution steps ]
 
@@ -107,7 +107,7 @@ AssertionError
 
 [ case teardown ] 修改班级2（已有的班级同名） - tc000052
 
-* 修改班级3（ID为一个不存在的班级ID号） - tc000053  -  2022-05-06 23:44:24
+* 修改班级3（ID为一个不存在的班级ID号） - tc000053  -  2022-05-06 23:55:13
 
   [ case execution steps ]
 
@@ -120,13 +120,13 @@ AssertionError
 
 -- 第 3 步 -- 列出班级 
 
-{'gradeid': 6, 'retlist': [{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206537318574', 'studentlimit': 69, 'studentnumber': 0, 'id': 20653, 'teacherlist': []}], 'retcode': 0}
+{'gradeid': 6, 'retlist': [{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206689788472', 'studentlimit': 69, 'studentnumber': 0, 'id': 20668, 'teacherlist': []}], 'retcode': 0}
 
 ** 检查点 **  列出结果检查 ---->  通过
 
   PASS 
 
-* 删除班级1 - tc000081  -  2022-05-06 23:44:24
+* 删除班级1 - tc000081  -  2022-05-06 23:55:13
 
   [ case execution steps ]
 
@@ -139,13 +139,13 @@ AssertionError
 
 -- 第 3 步 -- 列出班级 
 
-{'gradeid': 6, 'retlist': [{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206537318574', 'studentlimit': 69, 'studentnumber': 0, 'id': 20653, 'teacherlist': []}], 'retcode': 0}
+{'gradeid': 6, 'retlist': [{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206689788472', 'studentlimit': 69, 'studentnumber': 0, 'id': 20668, 'teacherlist': []}], 'retcode': 0}
 
 ** 检查点 **  列出结果检查 ---->  通过
 
   PASS 
 
-* 删除班级2 - tc000082  -  2022-05-06 23:44:24
+* 删除班级2 - tc000082  -  2022-05-06 23:55:13
 
   [ case execution steps ]
 
@@ -164,7 +164,7 @@ AssertionError
 
 -- 第 3 步 -- 列出班级 
 
-{'gradeid': 6, 'retlist': [{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206537318574', 'studentlimit': 69, 'studentnumber': 0, 'id': 20653, 'teacherlist': []}], 'retcode': 0}
+{'gradeid': 6, 'retlist': [{'name': '2015龙山理22班', 'grade__name': '高三', 'invitecode': '206689788472', 'studentlimit': 69, 'studentnumber': 0, 'id': 20668, 'teacherlist': []}], 'retcode': 0}
 
 ** 检查点 **  列出结果检查 ---->  通过
 
@@ -175,7 +175,7 @@ AssertionError
 
 [ suite setup ] cases\in_class_environment\in_teacher_environment\
 添加一个老师
-5214
+5225
 
 
 >>> cases\in_class_environment\in_teacher_environment\in_students_environment\
@@ -188,7 +188,7 @@ AssertionError
 
 >>> cases\in_class_environment\in_teacher_environment\in_students_environment\student_管理\student_add.py
 
-* 添加学生2 - tc002002  -  2022-05-06 23:44:24
+* 添加学生2 - tc002002  -  2022-05-06 23:55:14
 
   [ case execution steps ]
 
@@ -210,13 +210,13 @@ AssertionError
 
 >>> cases\in_class_environment\in_teacher_environment\in_students_environment\student_管理\student_del.py
 
-* 删除学生1 - tc002081  -  2022-05-06 23:44:24
+* 删除学生1 - tc002081  -  2022-05-06 23:55:14
 
   [ case execution steps ]
 
 -- 第 1 步 -- 创建一个学生 
 
-{'retcode': 0, 'id': 2140}
+{'retcode': 0, 'id': 2153}
 
 ** 检查点 **  检查返回创建成功码 ---->  通过
 
@@ -240,7 +240,7 @@ AssertionError
 
 >>> cases\in_class_environment\in_teacher_environment\no_students_environment\student_管理\student_add.py
 
-* 添加学生1 - tc002001  -  2022-05-06 23:44:24
+* 添加学生1 - tc002001  -  2022-05-06 23:55:14
 
   [ case execution steps ]
 
@@ -261,21 +261,21 @@ AssertionError
 
 >>> cases\in_class_environment\in_teacher_environment\teacher_管理\teacher_add.py
 
-* 添加老师2 - tc001002  -  2022-05-06 23:44:24
+* 添加老师2 - tc001002  -  2022-05-06 23:55:14
 
   [ case execution steps ]
-20653
+20668
 
 -- 第 1 步 -- 添加一个老师 
 
 
 ** 检查点 **  检查返回码信息 ---->  通过
 
-5215
+5226
 
 -- 第 2 步 -- 列出老师信息 
 
-5215
+5226
 
 ** 检查点 **  检查添加老师返回的ID信息 ---->  通过
 
@@ -283,10 +283,10 @@ AssertionError
 
 [ case teardown ] 添加老师2 - tc001002
 
-* 添加老师3（系统中存在同登录名的老师） - tc001003  -  2022-05-06 23:44:25
+* 添加老师3（系统中存在同登录名的老师） - tc001003  -  2022-05-06 23:55:14
 
   [ case execution steps ]
-20653
+20668
 
 -- 第 1 步 -- 添加一个老师 
 
@@ -306,7 +306,7 @@ AssertionError
 
 >>> cases\in_class_environment\in_teacher_environment\teacher_管理\teacher_del.py
 
-* 删除老师1(不存在的老师ID号) - tc001081  -  2022-05-06 23:44:25
+* 删除老师1(不存在的老师ID号) - tc001081  -  2022-05-06 23:55:14
 
   [ case execution steps ]
 {'reason': 'id 为`4545`的老师不存在', 'retcode': 404}
@@ -315,20 +315,20 @@ AssertionError
 
   PASS 
 
-* 删除老师2(存在的老师ID号) - tc001082  -  2022-05-06 23:44:25
+* 删除老师2(存在的老师ID号) - tc001082  -  2022-05-06 23:55:14
 
   [ case execution steps ]
 
 -- 第 1 步 -- 添加一个老师 
 
-5216
+5227
 
 ** 检查点 **  检查删除老师后的结果 ---->  通过
 
 
 -- 第 2 步 -- 列出老师信息 
 
-5214
+5225
 
 ** 检查点 **  检查修改后老师的信息 ---->  通过
 
@@ -339,10 +339,10 @@ AssertionError
 
 >>> cases\in_class_environment\in_teacher_environment\teacher_管理\teacher_modify.py
 
-* 修改老师1 - tc001051  -  2022-05-06 23:44:25
+* 修改老师1 - tc001051  -  2022-05-06 23:55:14
 
   [ case execution steps ]
-20653
+20668
 
 -- 第 1 步 -- 修改一个老师 
 
@@ -355,7 +355,7 @@ AssertionError
 
   PASS 
 
-* 修改老师2（修改真实名和授课班级,授课班级原来是1个班，改为两个班） - tc001052  -  2022-05-06 23:44:25
+* 修改老师2（修改真实名和授课班级,授课班级原来是1个班，改为两个班） - tc001052  -  2022-05-06 23:55:14
 
   [ case execution steps ]
 
@@ -370,7 +370,7 @@ AssertionError
 
 -- 第 3 步 -- 列出老师信息 
 
-{'retlist': [{'username': 'new_teacher', 'teachclasslist': [20653, 20658], 'realname': '修改初始化老师', 'id': 5214, 'phonenumber': '13451813456', 'email': 'jcysdf@123.com', 'idcardnumber': '3209251983090987899'}], 'retcode': 0}
+{'retlist': [{'username': 'new_teacher', 'teachclasslist': [20668, 20673], 'realname': '修改初始化老师', 'id': 5225, 'phonenumber': '13451813456', 'email': 'jcysdf@123.com', 'idcardnumber': '3209251983090987899'}], 'retcode': 0}
 
 ** 检查点 **  检查修改后老师的信息 ---->  通过
 
@@ -400,13 +400,13 @@ AssertionError
 
 >>> cases\in_class_environment\no_teacher_environment\no_students_environment\web_student_操作\student_operation.py
 
-* 学生登录1 - tc005081  -  2022-05-06 23:44:25
+* 学生登录1 - tc005081  -  2022-05-06 23:55:14
 
   [ case execution steps ]
 
 -- 第 1 步 -- 登录学生系统 
 
-['精锐', '白月学院00002', '21421447917（注册码）', '0', '0']
+['精锐', '白月学院00002', '21557923101（注册码）', '0', '0']
 
 ** 检查点 **  检查首页信息 ---->  通过
 
@@ -421,7 +421,7 @@ AssertionError
 
 [ case teardown ] 学生登录1 - tc005081
 
-* 学生登录 不输入账号 - UI-StuLg001  -  2022-05-06 23:44:51
+* 学生登录 不输入账号 - UI-StuLg001  -  2022-05-06 23:55:43
 
   [ case execution steps ]
 
@@ -429,11 +429,11 @@ AssertionError
 
 登录失败 : 用户或者密码错误
 
-** 检查点 **  检查提示信息 ---->  通过
+** 检查点 **  检查错误提示信息 ---->  通过
 
   PASS 
 
-* 学生登录 不输入密码 - UI-StuLg002  -  2022-05-06 23:44:55
+* 学生登录 不输入密码 - UI-StuLg002  -  2022-05-06 23:55:48
 
   [ case execution steps ]
 
@@ -441,11 +441,11 @@ AssertionError
 
 登录失败 : 用户或者密码错误
 
-** 检查点 **  检查提示信息 ---->  通过
+** 检查点 **  检查错误提示信息 ---->  通过
 
   PASS 
 
-* 学生登录 输入错误账号 - UI-StuLg003  -  2022-05-06 23:45:00
+* 学生登录 输入错误账号 - UI-StuLg003  -  2022-05-06 23:55:53
 
   [ case execution steps ]
 
@@ -453,11 +453,11 @@ AssertionError
 
 登录失败 : 用户或者密码错误
 
-** 检查点 **  检查提示信息 ---->  通过
+** 检查点 **  检查错误提示信息 ---->  通过
 
   PASS 
 
-* 学生登录 输入错误密码 - UI-StuLg004  -  2022-05-06 23:45:04
+* 学生登录 输入错误密码 - UI-StuLg004  -  2022-05-06 23:55:57
 
   [ case execution steps ]
 
@@ -465,11 +465,11 @@ AssertionError
 
 登录失败 : 用户或者密码错误
 
-** 检查点 **  检查提示信息 ---->  通过
+** 检查点 **  检查错误提示信息 ---->  通过
 
   PASS 
 
-* 学生登录 输入错误密码 - UI-StuLg005  -  2022-05-06 23:45:09
+* 学生登录 输入错误密码 - UI-StuLg005  -  2022-05-06 23:56:02
 
   [ case execution steps ]
 
@@ -477,7 +477,7 @@ AssertionError
 
 登录失败 : 用户或者密码错误
 
-** 检查点 **  检查提示信息 ---->  通过
+** 检查点 **  检查错误提示信息 ---->  通过
 
   PASS 
 
@@ -491,7 +491,7 @@ AssertionError
 -- 第 1 步 -- 添加老师 
 
 
-* 老师登录1 - tc005001  -  2022-05-06 23:45:14
+* 老师登录1 - tc005001  -  2022-05-06 23:56:07
 
   [ case execution steps ]
 ['白月学院00002', '老师数学老师-文跃锐', '高中数学', '0', '0', '0']
@@ -507,7 +507,7 @@ AssertionError
 
   PASS 
 
-* 老师登录2 - tc005002  -  2022-05-06 23:45:39
+* 老师登录2 - tc005002  -  2022-05-06 23:56:32
 
 [ case setup ] 老师登录2 - tc005002
 
@@ -522,76 +522,11 @@ AssertionError
 
 -- 第 2 步 -- 点击 班级学生 菜单 
 
-  ABORT   Message: element not interactable
-  (Session info: chrome=101.0.4951.41)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00FEB8F3+2406643]
-	Ordinal0 [0x00F7AF31+1945393]
-	Ordinal0 [0x00E6C610+837136]
-	Ordinal0 [0x00E9A2D3+1024723]
-	Ordinal0 [0x00E90083+983171]
-	Ordinal0 [0x00EB427C+1131132]
-	Ordinal0 [0x00E8FA64+981604]
-	Ordinal0 [0x00EB4494+1131668]
-	Ordinal0 [0x00EC4682+1197698]
-	Ordinal0 [0x00EB4096+1130646]
-	Ordinal0 [0x00E8E636+976438]
-	Ordinal0 [0x00E8F546+980294]
-	GetHandleVerifier [0x01259612+2498066]
-	GetHandleVerifier [0x0124C920+2445600]
-	GetHandleVerifier [0x01084F2A+579370]
-	GetHandleVerifier [0x01083D36+574774]
-	Ordinal0 [0x00F81C0B+1973259]
-	Ordinal0 [0x00F86688+1992328]
-	Ordinal0 [0x00F86775+1992565]
-	Ordinal0 [0x00F8F8D1+2029777]
-	BaseThreadInitThunk [0x74B80419+25]
-	RtlGetAppContainerNamedObjectPath [0x770D72AD+237]
-	RtlGetAppContainerNamedObjectPath [0x770D727D+189]
- 
-Traceback:
-  File "cases\in_class_environment\no_teacher_environment\no_students_environment\web_teacher_操作\teacher_operation.py", line 81, in teststeps
-    class_student_info = teacher_operation.get_class_student_info()
-  File "D:\study\AutoTest_education\lib\webUI\yjyx_webui_teacher_operation.py", line 71, in get_class_student_info
-    self.web_driver.find_element(By.CSS_SELECTOR,'.main-menu .menu-title').click()
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
-    self._execute(Command.CLICK_ELEMENT)
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webelement.py", line 693, in _execute
-    return self._parent.execute(command, params)
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 418, in execute
-    self.error_handler.check_response(response)
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 243, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
-  (Session info: chrome=101.0.4951.41)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00FEB8F3+2406643]
-	Ordinal0 [0x00F7AF31+1945393]
-	Ordinal0 [0x00E6C610+837136]
-	Ordinal0 [0x00E9A2D3+1024723]
-	Ordinal0 [0x00E90083+983171]
-	Ordinal0 [0x00EB427C+1131132]
-	Ordinal0 [0x00E8FA64+981604]
-	Ordinal0 [0x00EB4494+1131668]
-	Ordinal0 [0x00EC4682+1197698]
-	Ordinal0 [0x00EB4096+1130646]
-	Ordinal0 [0x00E8E636+976438]
-	Ordinal0 [0x00E8F546+980294]
-	GetHandleVerifier [0x01259612+2498066]
-	GetHandleVerifier [0x0124C920+2445600]
-	GetHandleVerifier [0x01084F2A+579370]
-	GetHandleVerifier [0x01083D36+574774]
-	Ordinal0 [0x00F81C0B+1973259]
-	Ordinal0 [0x00F86688+1992328]
-	Ordinal0 [0x00F86775+1992565]
-	Ordinal0 [0x00F8F8D1+2029777]
-	BaseThreadInitThunk [0x74B80419+25]
-	RtlGetAppContainerNamedObjectPath [0x770D72AD+237]
-	RtlGetAppContainerNamedObjectPath [0x770D727D+189]
+老六
 
+** 检查点 **  检查班级学生信息 ---->  通过
 
+  PASS 
 
 [ case teardown ] 老师登录2 - tc005002
 
@@ -600,21 +535,21 @@ Backtrace:
 
 >>> cases\in_class_environment\no_teacher_environment\teacher_管理\teacher_add.py
 
-* 添加老师1 - tc001001  -  2022-05-06 23:46:07
+* 添加老师1 - tc001001  -  2022-05-06 23:56:56
 
   [ case execution steps ]
-20653
+20668
 
 -- 第 1 步 -- 添加一个老师 
 
 
 ** 检查点 **  检查返回码信息 ---->  通过
 
-5218
+5229
 
 -- 第 2 步 -- 列出老师信息 
 
-5218
+5229
 
 ** 检查点 **  检查添加老师返回的ID信息 ---->  通过
 
@@ -627,7 +562,7 @@ Backtrace:
 
 >>> cases\no_class_environment\class_管理\class_management.py
 
-* 添加班级1 - tc000001  -  2022-05-06 23:46:07
+* 添加班级1 - tc000001  -  2022-05-06 23:56:56
 
   [ case execution steps ]
 
@@ -647,21 +582,21 @@ Backtrace:
 [ case teardown ] 添加班级1 - tc000001
 
 
-  ========= 测试结束 : 20220506_234607 =========
+  ========= 测试结束 : 20220506_235656 =========
 
 
-  耗时    : 103.439 秒
+  耗时    : 102.862 秒
 
 
   预备执行用例数量 : 26
 
   实际执行用例数量 : 26
 
-  通过 : 23
+  通过 : 24
 
   失败 : 2
 
-  异常 : 1
+  异常 : 0
 
   套件初始化失败 : 0
 

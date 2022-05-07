@@ -12,7 +12,7 @@ from lib.api.yjyx_student_api import gs_student
 import time
 
 # 根据标签挑选
-force_tags = ['管理员登录','系统测试','UI测试','UI-StuLg000X']
+force_tags = ['学生登录','系统测试','UI测试','UI-StuLg000X']
 
 class Case_tc005081:
 	name = '学生登录1 - tc005081'
@@ -41,6 +41,11 @@ class Case_tc005081:
 
 class Case_StuLg000X:
 	
+	# 登录功能的数据驱动
+	'''
+	正确用户名 ：student_yuer
+	正确密码   ：888888
+	'''
 	ddt_cases = [
 		{
 			'name': '学生登录 不输入账号 - UI-StuLg001',
@@ -66,12 +71,12 @@ class Case_StuLg000X:
 	
 	def teststeps(self):
 		
-		# 取出参数
-		username, password,tips = self.para
+		# 取出参数(变量解包)
+		username, password,tips_info = self.para
 		
 		# 测试步骤如下
 		STEP(1, '登录学生系统')
 		student_operation.student_login(username,password)
-		tips_info = student_operation.get_tips_info()
-		INFO(tips_info)
-		CHECK_POINT('检查提示信息',tips_info == tips)
+		get_tips_info = student_operation.get_tips_info()
+		INFO(get_tips_info)
+		CHECK_POINT('检查错误提示信息',get_tips_info == tips_info)
