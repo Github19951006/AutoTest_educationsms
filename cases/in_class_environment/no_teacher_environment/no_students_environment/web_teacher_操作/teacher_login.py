@@ -48,6 +48,7 @@ class Case_teacherLg00x:
 		# 测试步骤如下
 		STEP(1, '登录老师系统')
 		teacher_operation.teacher_login(username, password)
+		STEP(2,'获取提示信息')
 		get_tips_info = teacher_operation.get_tips_info()
 		INFO(get_tips_info)
 		CHECK_POINT('检查错误提示信息', get_tips_info == tips_info)
