@@ -6,10 +6,7 @@
 @File   :student_operation.py
 """
 from hytest import *
-from cfg.cfg import *
 from lib.webUI.yjyx_webui_student_operation import student_operation
-from lib.api.yjyx_student_api import gs_student
-import time
 
 # 根据标签挑选
 force_tags = ['学生登录','系统测试','UI测试','UI-StuLg000X']
@@ -165,6 +162,7 @@ class Case_StuModif00x:
 	]
 	
 	def teststeps(self):
+		
 		# 初始密码：888888
 		self.START_PASSWORD = '888888'
 		
